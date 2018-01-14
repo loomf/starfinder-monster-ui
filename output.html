@@ -1,0 +1,60 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+
+<p>Random Creature <b>CR {{ CR }}</b><br>
+<b>XP {{ XP }}</b> <br>
+<b>Init</b> +{{ Initiative }}; <b>Senses</b> {{ Senses }} <b>Perception</b> {{Skills.Perception}}<br>
+</p>
+
+<p class="divider">DEFENSE</p>
+
+<b>KAC </b> {{KAC}}, <b>EAC </b> {{EAC}}<br>
+<b>HP </b> {{HP}} <br>
+<b>Fort: </b> +{{Fort}}, <b>Reflex:</b> +{{Reflex}}, <b>Will:</b> +{{Will}}<br>
+
+<b>Defensive Abilities</b>
+<span v-for="(value,key) in DefensiveAbilities">
+  {{key}},
+</span>
+
+<p class="divider">OFFENSE</p>
+
+<b>Speed </b> {{Speed}}<br>
+<b>Melee</b> 
+<span class="Attack" v-for="atk in Melee">
+  +{{atk.AttackBonus}} ({{atk.DamageDice.Num}}d{{atk.DamageDice.Size}}+{{STR}}) {{atk.DamageType}} <br>
+</span>
+
+<b>Ranged</b>
+<span class="Attack" v-for="atk in Ranged">
+  +{{atk.AttackBonus}} ({{atk.DamageDice.Num}}d{{atk.DamageDice.Size}}) {{atk.DamageType}} <br>
+</span>
+
+<b>Offensive Abilities:</b>
+<span v-for="offense in OffensiveAbilities">
+  {{offense}},
+</span>
+
+<p class="divider">STATISTICS</p>
+
+<b>Str</b> +{{STR}}, <b>Dex</b> +{{DEX}}, <b>Con</b> +{{CON}}, <b>Int</b> +{{INT}}, <b>Wis</b> +{{WIS}}, <b>Cha</b> +{{CHA}} <br>
+<b>Skills</b>
+<span v-for="(val,skill) in Skills">
+  {{skill}} +{{val}};
+</span> <br>
+
+<b>Languages</b>
+<div v-for="lang in Languages">
+{{lang}}
+</div>
+
+<p class="divider">SPECIAL ABILITIES</p>
+<div v-for="(val,key) in SpecialAbilities">
+<b>{{key}}</b>: {{val}}
+</div>
+<div v-for="(val,key) in OtherAbilities">
+<b>{{key}}</b>: {{val}}
+</div>
+
+</div>
