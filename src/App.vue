@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <p>{{ stats }}</p>
+    <StatBlock :stats="stats"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import StatBlock from './components/StatBlock'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    StatBlock
+  },
+  data: function () {
+    return {
+      stats: JSON.parse(new URLSearchParams(window.location.search).get('stats'))
+    }
   }
 }
 </script>
@@ -21,8 +26,5 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

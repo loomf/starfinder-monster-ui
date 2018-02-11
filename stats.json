@@ -1,0 +1,85 @@
+{
+  "CR": "3",
+  "XP": 0,
+  "Size": "",
+  "Type": "Construct",
+  "Subtype": "Magical",
+  "Initiative": 4,
+  "EAC": 14,
+  "KAC": 16,
+  "HP": 40,
+  "Fort": 7,
+  "Reflex": 7,
+  "Will": 2,
+  "AbilityDC": 12,
+  "BaseSpellDC": 11,
+  "STR": 2,
+  "DEX": 4,
+  "CON": -2,
+  "INT": 1,
+  "WIS": 0,
+  "CHA": 0,
+  "Languages": null,
+  "Skills": {
+    "Athletics": 8,
+    "Diplomacy": 8,
+    "Engineering": 8,
+    "Perception": 13
+  },
+  "Melee": [
+    {
+      "DamageDice": {
+        "Num": 1,
+        "Size": 6
+      },
+      "AttackBonus": 11,
+      "DamageType": "Kinetic"
+    }
+  ],
+  "Ranged": [
+    {
+      "DamageDice": {
+        "Num": 1,
+        "Size": 6
+      },
+      "AttackBonus": 8,
+      "DamageType": "Kinetic"
+    }
+  ],
+  "Speed": {
+    "Land": 30
+  },
+  "Abilities": {
+    "IMMUNITY": {
+      "Construct Immunities": {
+        "Name": "Construct Immunities",
+        "Type": "IMMUNITY",
+        "Format": "",
+        "Description": ""
+      }
+    },
+    "OTHER": {
+      "Unliving": {
+        "Name": "Unliving",
+        "Type": "OTHER",
+        "Format": "",
+        "Description": ""
+      }
+    },
+    "SENSE": {
+      "Darkvision": {
+        "Name": "Darkvision",
+        "Type": "SENSE",
+        "Format": "",
+        "Description": ""
+      },
+      "Low-Light Vision": {
+        "Name": "Low-Light Vision",
+        "Type": "SENSE",
+        "Format": "",
+        "Description": ""
+      }
+    }
+  },
+  "DR": ""
+}

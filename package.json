@@ -6,11 +6,14 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "docker-dev": "docker run -it --rm -p 8080:8080 -e HOST=0.0.0.0 -v $PWD:/build -w /build node sh -c 'yarn dev'",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
     "vue": "^2.5.2"
   },
   "devDependencies": {
